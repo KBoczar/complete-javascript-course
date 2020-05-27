@@ -32,7 +32,7 @@ console.log(isFullAge);
 * coding challange 1
 */
 
-
+/*
 var massJohn, heightJohn, massMark, heightMark,bmiJohn, bmiMark, isBmiMarkHigher;
 massJohn = prompt('podaj masę Johna w kg');
 heightJohn = prompt('podaj wzrost Johna w cm')/100;
@@ -47,3 +47,44 @@ if(bmiMark > bmiJohn){
 }else if (bmiMark = bmiJohn){
     console.log('BMI Marka i Johna są takie same', isBmiMarkHigher)
 }else console.log('BMI Johna jest Wyższe', isBmiMarkHigher)
+
+
+/********************
+* coding challange 2
+*/
+
+
+var mikeScore = [10, 10, 10];
+var johnScore = [10, 10, 10];
+var marryScore = [1, 1, 1];
+var sum = 0;
+var sum2 = 0;
+var sum3 = 0;
+ 
+for (var i =0; i < mikeScore.length; i++){
+    sum = sum + mikeScore[i];
+    var avre = sum / mikeScore.length;
+   }
+
+for (i = 0; i < johnScore.length; i++){
+   sum2 = sum2 + johnScore[i];
+    var avre2 = sum2 / johnScore.length;
+}
+
+for (i = 0; i < marryScore.length; i++){
+    sum3 = sum3 + marryScore[i];
+     var avre3 = sum3 / marryScore.length;
+ }
+
+if( avre > avre2 && avre > avre3){
+console.log('Mike tem wins');
+} else if (avre2 > avre && avre2 > avre3) {
+    console.log('John team wins');
+}else if (avre3 > avre && avre3 > avre2){
+    console.log('Mary team wins');
+}else  {
+    console.log('There is a draw');
+};
+
+console.log(avre, avre2, avre3);
+
