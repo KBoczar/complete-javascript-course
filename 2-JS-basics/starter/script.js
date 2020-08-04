@@ -88,3 +88,91 @@ console.log('Mike tem wins');
 
 console.log(avre, avre2, avre3);
 
+
+
+ /************************
+  * Arrays
+  */
+
+  var names = ['John', 'Mark', 'Jane'];
+  var years = new Array(1990, 1969, 1948);
+
+  console.log(names[0]);
+  console.log(names[0].length);
+
+
+  /**********************
+   *  Coding chellange 3
+   */
+
+   function tipCalculator(bill){
+       var percentage;
+       if (bill < 50){
+           percentage = .2;
+       } else if (bill >=50 && bill < 200){
+           percentage = .15;
+       }else{
+           percentage = .1;
+       }
+       return percentage * bill;
+   }
+   var bills = [124, 48,  268];
+   var tips = [tipCalculator(bills[0]),
+               tipCalculator(bills[1]),
+               tipCalculator(bills[2])];
+
+    var finalValues = [bills[0] + tips[0],
+                       bills[1] + tips[1],
+                       bills[2] + tips[2]];    
+   
+                     
+   console.log(tips, finalValues);
+
+   /****************************
+    * Objects & properties
+    */
+
+    var john = {
+        firstName: 'John',
+        lastName: 'Smith',
+        birthYear: 1990,
+        family: ['Jane', 'Mark', 'Bob', 'Emily'],
+        job: 'teacher',
+        isMarried: false
+    };
+
+    console.log(john.firstName, john.lastName, john.birthYear);
+
+    /****************************
+     * Coding chellange 4
+     */
+
+     var john = {
+         fullName: 'John Smith',
+         mass: 192,
+         heigh: 1.95,
+         calcBMI: function(){
+             this.bmi = this.mass / (this.heigh * this.heigh);
+             return this.bmi;
+         }
+     };
+
+     var mark = {
+        fullName: 'Mark Smith',
+        mass: 78,
+        heigh: 1.69,
+        calcBMI: function(){
+            this.bmi = this.mass / (this.heigh * this.heigh);
+            return this.bmi;
+        }
+    };
+    john.calcBMI();
+    mark.calcBMI();
+
+    if (john.bmi > mark.bmi){
+        console.log(john.fullName + ' has a higher BMI of ' + john.bmi);
+    }else if (mark.bmi > john.bmi){
+        console.log(mark.fullName + ' has a higher BMI of ' + mark.bmi);
+    }else {
+        console.log('They have the same BMI');
+    };
